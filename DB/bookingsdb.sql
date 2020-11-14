@@ -16,11 +16,11 @@ CREATE SCHEMA IF NOT EXISTS `bookingsdb` DEFAULT CHARACTER SET utf8 ;
 USE `bookingsdb` ;
 
 -- -----------------------------------------------------
--- Table `bookings`
+-- Table `Booking`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `bookings` ;
+DROP TABLE IF EXISTS `Booking` ;
 
-CREATE TABLE IF NOT EXISTS `bookings` (
+CREATE TABLE IF NOT EXISTS `Booking` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(45) NULL DEFAULT 'null',
   `last_name` VARCHAR(45) NULL DEFAULT 'null',
@@ -44,16 +44,16 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
--- Data for table `bookings`
+-- Data for table `Booking`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `bookingsdb`;
-INSERT INTO `bookings` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (1, 'Craig', 'Martin', 'j.craig@yahoo.com', 'Portrait', 'San Diego, CA', 2, 'Booked family portrait session');
-INSERT INTO `bookings` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (2, 'Jill', 'Mitchell', 'jillmitchell@gmail.com', 'Wedding', 'San Diego, CA', 8, 'More details to come');
-INSERT INTO `bookings` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (3, 'Carla', 'Lee', 'carlalee@gmail.com', 'Portrait', 'Denver, CO', 2, 'Booked family portait session');
-INSERT INTO `bookings` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (4, 'Kristy', 'Collins', 'kcollins@gmail.com', 'Portrait', 'Denver, CO', 2, 'Newborn portrait session');
-INSERT INTO `bookings` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (DEFAULT, NULL, NULL, NULL, '', '', 2, NULL);
-INSERT INTO `bookings` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (DEFAULT, NULL, NULL, NULL, NULL, '', NULL, NULL);
+INSERT INTO `Booking` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (1, 'Craig', 'Martin', 'j.craig@yahoo.com', 'Portrait', 'San Diego, CA', 2, 'Booked family portrait session');
+INSERT INTO `Booking` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (2, 'Jill', 'Mitchell', 'jillmitchell@gmail.com', 'Wedding', 'San Diego, CA', 8, 'More details to come');
+INSERT INTO `Booking` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (3, 'Carla', 'Lee', 'carlalee@gmail.com', 'Portrait', 'Denver, CO', 2, 'Booked family portait session');
+INSERT INTO `Booking` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (4, 'Kristy', 'Collins', 'kcollins@gmail.com', 'Portrait', 'Denver, CO', 2, 'Newborn portrait session');
+INSERT INTO `Booking` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (DEFAULT, NULL, NULL, NULL, '', '', 2, NULL);
+INSERT INTO `Booking` (`id`, `first_name`, `last_name`, `email`, `photo_type`, `location`, `duration`, `notes`) VALUES (DEFAULT, NULL, NULL, NULL, NULL, '', NULL, NULL);
 
 COMMIT;
 
