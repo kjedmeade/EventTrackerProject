@@ -1,3 +1,4 @@
+package com.skilldistillery.booking.controllers;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,7 +25,7 @@ import com.skilldistillery.booking.services.BookingService;
 		private BookingService pBServ;
 		
 		
-		@GetMapping("bookings/")
+		@GetMapping("bookings")
 		public List<Booking> listAllBookings(HttpServletResponse response) {
 			List<Booking> bookings = pBServ.listAllBookings();
 			if (bookings == null) {
@@ -34,7 +35,7 @@ import com.skilldistillery.booking.services.BookingService;
 		}
 		
 		@GetMapping("bookings/{id}")
-		public Booking listBookingById(Integer id, HttpServletResponse response) {
+		public Booking listBookingById(@PathVariable Integer id, HttpServletResponse response) {
 			Booking booking  = pBServ.findBookingById(id);
 			if (booking == null) {
 				response.setStatus(404);
@@ -58,7 +59,7 @@ import com.skilldistillery.booking.services.BookingService;
 			return booking;
 		}
 		
-		@PutMapping("posts/{id}")
+		@PutMapping("bookings/{id}")
 		public Booking updatePost(@RequestBody Booking booking, @PathVariable int id, HttpServletResponse response) {
 			booking = pBServ.updateBooking(id, booking);
 			try {

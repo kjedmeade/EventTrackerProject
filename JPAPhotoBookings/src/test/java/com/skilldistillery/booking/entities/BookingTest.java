@@ -1,3 +1,5 @@
+package com.skilldistillery.booking.entities;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -50,7 +52,10 @@ public class BookingTest {
 		assertEquals("j.craig@yahoo.com", booking.getEmail());
 		assertEquals("Portrait", booking.getPhotoType());
 		assertEquals("San Diego, CA", booking.getLocation());
-		assertEquals("2", booking.getDuration());
+		assertEquals(2, booking.getDuration());
+		assertEquals(2021, booking.getDate().getYear());
+//		assertEquals(1, booking.getDate().getDayOfMonth());
+//		assertEquals(11, booking.getDate().getMonthValue());
 		assertEquals("Booked family portrait session", booking.getNotes());
 	}
 	

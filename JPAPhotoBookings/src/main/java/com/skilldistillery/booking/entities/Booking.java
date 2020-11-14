@@ -1,5 +1,7 @@
 package com.skilldistillery.booking.entities;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,6 +23,10 @@ public class Booking {
 			
 			private String  email;
 			
+		
+			private LocalDate date;
+			
+
 			@Column(name = "photo_type")
 			private String  photoType;
 			
@@ -81,11 +87,18 @@ public class Booking {
 			public void setNotes(String notes) {
 				this.notes = notes;
 			}
+			
+			public LocalDate getDate() {
+				return date;
+			}
+			public void setDate(LocalDate date) {
+				this.date = date;
+			}
 			@Override
 			public String toString() {
 				return "Booking [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-						+ ", photoType=" + photoType + ", location=" + location + ", duration=" + duration + ", notes="
-						+ notes + "]";
+						+ ", date=" + date + ", photoType=" + photoType + ", location=" + location + ", duration="
+						+ duration + ", notes=" + notes + "]";
 			}
 			@Override
 			public int hashCode() {
