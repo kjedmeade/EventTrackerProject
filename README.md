@@ -22,10 +22,10 @@ The database used is collection of data on photography bookings for a single pho
 
 
 ### Classes
-##### Booking Entity
+#### Booking Entity
 A gradle project was created to store the booking entity and a Junit test case was conducted to confirm correct mappings.
 
-##### Other Classes
+#### Other Classes
 A separate Spring Starter Project was created to hold the controller, service, repository classes for the booking entity.  The main service class holds methods for conducting CRUD operations on the booking database.
 
 
