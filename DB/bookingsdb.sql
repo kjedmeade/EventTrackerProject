@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `booking` (
   `first_name` VARCHAR(45) NULL DEFAULT 'null',
   `last_name` VARCHAR(45) NULL DEFAULT 'null',
   `email` VARCHAR(45) NULL DEFAULT 'null',
-  `date` DATE NULL,
+  `date` DATE NULL DEFAULT NULL,
   `photo_type` VARCHAR(45) NULL,
   `location` VARCHAR(45) NULL,
   `duration` INT NULL DEFAULT 0,
@@ -51,7 +51,7 @@ START TRANSACTION;
 USE `bookingsdb`;
 INSERT INTO `booking` (`id`, `first_name`, `last_name`, `email`, `date`, `photo_type`, `location`, `duration`, `notes`) VALUES (1, 'Craig', 'Martin', 'j.craig@yahoo.com', '2021-01-11', 'Portrait', 'San Diego, CA', 2, 'Booked family portrait session');
 INSERT INTO `booking` (`id`, `first_name`, `last_name`, `email`, `date`, `photo_type`, `location`, `duration`, `notes`) VALUES (4, 'Jill', 'Mitchell', 'jillmitchell@gmail.com', '2021-03-02', 'Wedding', 'San Diego, CA', 8, 'More details to come');
-INSERT INTO `booking` (`id`, `first_name`, `last_name`, `email`, `date`, `photo_type`, `location`, `duration`, `notes`) VALUES (2, 'Carla', 'Lee', 'carlalee@gmail.com', '2021-04-12', 'Portrait', 'Denver, CO', 2, 'Booked family portait session');
+INSERT INTO `booking` (`id`, `first_name`, `last_name`, `email`, `date`, `photo_type`, `location`, `duration`, `notes`) VALUES (2, 'Carla', 'Lee', 'carlalee@gmail.com', '2021-04-09', 'Portrait', 'Denver, CO', 2, 'Booked family portait session');
 INSERT INTO `booking` (`id`, `first_name`, `last_name`, `email`, `date`, `photo_type`, `location`, `duration`, `notes`) VALUES (3, 'Kristy', 'Collins', 'kcollins@gmail.com', '2021-06-01', 'Portrait', 'Denver, CO', 2, 'Newborn portrait session');
 
 COMMIT;

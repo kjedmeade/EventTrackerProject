@@ -54,8 +54,8 @@ public class BookingTest {
 		assertEquals("San Diego, CA", booking.getLocation());
 		assertEquals(2, booking.getDuration());
 		assertEquals(2021, booking.getDate().getYear());
-//		assertEquals(1, booking.getDate().getDayOfMonth());
-//		assertEquals(11, booking.getDate().getMonthValue());
+		assertEquals(1, booking.getDate().getMonthValue());
+		assertEquals(11, booking.getDate().getDayOfMonth());
 		assertEquals("Booked family portrait session", booking.getNotes());
 	}
 	

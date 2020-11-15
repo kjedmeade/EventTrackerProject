@@ -69,8 +69,9 @@ public class BookingServiceImpl implements BookingService {
 		 }
 		 return deleted;
 			}
-
-
-	}
+		
+	
+	
+}
 
 
