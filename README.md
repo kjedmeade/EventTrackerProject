@@ -21,11 +21,11 @@ This project is a tracker for photography bookings. A user is able to perform CR
 The database used is collection of data on photography bookings for a single photographer. Booking information for each client  in the database includes the first name, last name, booking date, type of event (e.g. portrait session), location, etc.
 
 
-## Classes
-#### Booking Entity
+### Classes
+##### Booking Entity
 A gradle project was created to store the booking entity and a Junit test case was conducted to confirm correct mappings.
 
-#### Other Classes
+##### Other Classes
 A separate Spring Starter Project was created to hold the controller, service, repository classes for the booking entity.  The main service class holds methods for conducting CRUD operations on the booking database.
 
 
