@@ -19,8 +19,10 @@ This project is a tracker for photography bookings. A user is able to perform CR
 
 ### Database
 The database used is collection of data on photography bookings for a single photographer. Booking information for each client  in the database includes the first name, last name, booking date, type of event (e.g. portrait session), location, etc.
-![GitHub Logo](DB/bookingsdb.png)
 
+
+
+![GitHub Logo](DB/bookingsdb.png)
 ### Classes
 #### Booking Entity
 A gradle project was created to store the booking entity and a Junit test case was conducted to confirm correct mappings.
