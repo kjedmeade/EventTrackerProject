@@ -34,5 +34,23 @@ A separate Spring Starter Project was created to hold the controller, service, r
 ### Postman
 Postman test were created to check for correct mappings. A user is able view a list of all bookings in the database, find a booking by its id, create a new booking, update a booking, and/or delete a booking. Status codes were also added and implemented confirm the status of a request.
 
+### Access
+List all bookings(Get)
+http://3.132.51.29:8080/BookingsTracker/api/bookings
+
+Find a single booking by Id (Get)
+http://3.132.51.29:8080/BookingsTracker/api/bookings/{id}
+
+Create a new booking(Post)
+http://3.132.51.29:8080/BookingsTracker/api/bookings/
+
+Update a booking(Put)
+http://3.132.51.29:8080/BookingsTracker/api/bookings/{id}
+
+Delete a booking(Delete)
+http://3.132.51.29:8080/BookingsTracker/api/bookings/{id}
+
+
+
 ### Lessons learned:
 I am learning more about the ease of use that with JPARepository.
