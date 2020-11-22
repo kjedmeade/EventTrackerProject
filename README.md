@@ -32,7 +32,7 @@ A gradle project was created to store the booking entity and a Junit test case w
 A separate Spring Starter Project was created to hold the controller, service, repository classes for the booking entity.  The main service class holds methods for conducting CRUD operations on the booking database.
 
 ### JavaScript
-JavaScript was used to create the front End fo this application via XHR. Event listeners, XHR code, as well as some of the elements displayed on the page were coded in the script.js file.
+JavaScript was used to create the front end of this application via XHR. Event listeners, XHR code, and some of the elements displayed on the page were coded in the script.js file.
 
 ### Postman
 Postman test were created to check for correct mappings. A user is able view a list of all bookings in the database, find a booking by its id, create a new booking, update a booking, and/or delete a booking. Status codes were also added and implemented confirm the status of a request.
