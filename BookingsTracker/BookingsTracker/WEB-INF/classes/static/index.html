@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bookings Tracker</title>
+<link rel="stylesheet" href="bookings.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<div = class="container-sm">
+		<br>
+		<p
+			style="text-align: right; font-size: 25px; font-family: Avenir light; color: gray">Ava
+			Anonymous Photography
+		<p>
+		<div style="text-align: center;">
+			<img src="bouquet.png/" class="Responsive image"
+				style="height: 500px; width: 900px">
+		</div>
+		<br> <br> <br> <br> <br>
+		<p
+			style="text-align: center; font-size: 30px; font-family: Avenir light; color: gray">
+			Hi! I'm Ava. I am a photographer currently based in Minneapolis, MN,
+			but am available WORLDWIDE to capture your special moments! Before
+			booking, check for currently booked sessions below. Look forward to
+			meeting you soon! <br> <br>
+		<p
+			style="text-align: center; font-size: 30px; font-family: Avenir light; color: gray">CHECK
+			OUT UPCOMING BOOKINGS!
+		<p>
+			<br>
+		<div id="allBookings" class="container-sm"></div>
+		<br> <br> <br>
+		<div id="showAverage"></div>
+		<div class="container-sm"></div>
+	</div>
+	<br>
+	<br>
+	<br>
+<p style="text-align: center; color: gray; font-size:40px">BOOK A SESSION</p>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col">
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+				<div style="text-align: center;">
+					<img src="baby.png/" class="Responsive image"
+						style="height: 350px; width: 450px">
+				</div>
+				</div>
+
+			
+			<div class="col">
+				<form name="createBooking">
+						<br>
+					<p class="create">FIRST NAME</p>
+					<input type="text" name="firstName">
+					<p class="create">LAST NAME</p>
+					<input type="text" name="lastName">
+					<p class="create">EMAIL</p>
+					<input type="text" name="email">
+					<p class="create">DATE</p>
+					<input type="text" name="date" type="hidden"
+						placeholder="YYYY-MM-DD"><br>
+					<p class="create">PHOTO TYPE</p>
+					<select type="text" name="photoType">
+						<option value="Portrait Session">Portrait Session</option>
+						<option value="Wedding">Wedding</option>
+						<option value="Newborn Session">Newborn Session</option>
+					</select><br>
+					<p class="create">LOCATION</p>
+					<input type="text" name="location"><br>
+					<p class="create">DURATION</p>
+					<input type="number" name="duration"><br>
+					<p class="create">NOTES</p>
+					<input type="text" name="notes"><br> <br> <div style="text-align: center"><input
+				type="submit" name="submit" class="btn btn-link" value="SUBMIT"></div>
+
+				</form>
+			</div>
+		</div>
+		</div>
+		</div>
+
+		<br> <br>
+	<p style="text-align: center; color: gray; font-size:40px">UPDATE YOUR SESSION INFO</p>
+		
+		<div class="container-sm" >
+  <div class="row">
+    <div class="col">
+      <form name="updateBooking">
+			<br>
+			<p class="create">ID OF BOOKING TO UPDATE</p>
+			<input type="number" name="id" id="bookingId"><br>
+			<p class="create">FIRST NAME</p>
+			<input type="text" name="firstName"><br>
+			<p class="create">LAST NAME</p>
+			<input type="text" name="lastName"><br>
+			<p class="create">EMAIL</p>
+			<input type="text" name="email"><br>
+			<p class="create">DATE</p>
+			<input type="text" name="date" type="hidden" placeholder="YYYY-MM-DD"><br>
+			<p class="create">PHOTO TYPE</p>
+			<select type="text" name="photoType">
+				<option value="Portrait Session">Portrait Session</option>
+				<option value="Wedding">Wedding</option>
+				<option value="Newborn Session">Newborn Session</option>
+			</select><br>
+			<p class="create">LOCATION</p>
+			<input type="text" name="location"><br>
+			<p class="create">DURATION</p>
+			<input type="number" name="duration"><br>
+			<p class="create">NOTES</p>
+			<input type="text" name="notes"><br> <br> 
+			<div style="text-align: center"><input
+				type="submit" name="submit" class="btn btn-link" value="SUBMIT"></div>
+
+		</form>
+    </div>
+    <div class="col"><br><br><br><br><br><br>
+<div style="text-align: center;">
+			<img src="family.png/" class="Responsive image"
+				style="height: 350px; width: 450px">
+		</div>
+    </div>
+  </div>
+  </div>
+</div>
+
+		
+		<br> <br>
+<div style="text-align: center">
+		<form name="deleteBooking">
+			<br>
+				<p style="text-align: center; color: gray; font-size:40px">DELETE A BOOKING</p>
+			<p style="text-align: center; color: gray; font-size:25px">Enter the Booking ID to delete</p>
+			<input type="number" name="id" id='deletedId'><br> <br>
+			<input type="submit" name="submit" class="btn btn-link" value="SUBMIT">
+
+		</form>
+		<br> <br>
+		<div id="bookingData"></div>
+
+	</div>
+	
+
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+		integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+		crossorigin="anonymous"></script>
+	-->
+</body>
+</html>

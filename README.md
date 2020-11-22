@@ -3,6 +3,8 @@
 This project is a tracker for photography bookings. A user is able to perform CRUD operations on a photography booking database belonging to a single photographer. Response codes were also created to show the status of a request based on the request.
 
 ### Technologies used:
+* JavaScript
+* XHR
 * Spring REST Services
 * JPARepository
 * Postman
@@ -20,6 +22,8 @@ This project is a tracker for photography bookings. A user is able to perform CR
 ### Database
 The database used is collection of data on photography bookings for a single photographer. Booking information for each client  in the database includes the first name, last name, booking date, type of event (e.g. portrait session), location, etc.
 
+## JavaScript
+JavaScript was used to create the front End fo this application via XHR. Event listeners, XHR code, as well as some of the elements displayed on the page were coded in the script.js file.
 
 
 ![GitHub Logo](DB/bookingsdb.png)
