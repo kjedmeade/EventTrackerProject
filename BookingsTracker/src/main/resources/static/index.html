@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id ="allBookings"></div>
+<br><br><br>
+<div id ="showAverage"></div>
+
+<form name="createBooking">
+<br><h3> Create Booking</h3>
+    <p>First Name</p> <input type="text" name="firstName"><br>
+      <p> Last Name</p> <input type="text" name="lastName"><br>
+        <p>Email</p> <input type="text" name="email"><br>
+     <p> Date </p>  <input type="text" name="date" type="hidden" value= 2020-11-05><br>
+      <p> Photo Type </p><input type="text" name="photoType" ><br>
+       <p> Location </p><input type="text" name="location"><br>
+        <p>Duration </p><input type="number" name="duration"><br>
+        <p>Notes </p><input type="text" name="notes"><br>
+<br>
+    <input type="submit" name="submit">
+    
+    </form>
+   <br>
+   <br>
+    
+<form name="updateBooking">
+<br><h3> Update Booking</h3>
+    <p>Enter the Booking Id to update</p> <input type="number" name="id" id = "bookingId"><br>
+    <p>First Name</p> <input type="text" name="firstName"><br>
+      <p> Last Name</p> <input type="text" name="lastName"><br>
+        <p>Email</p> <input type="text" name="email"><br>
+     <p> Date </p>  <input type="text" name="date" type="hidden" value= 2020-11-05><br>
+      <p> Photo Type </p><input type="text" name="photoType" ><br>
+       <p> Location </p><input type="text" name="location"><br>
+        <p>Duration </p><input type="number" name="duration"><br>
+        <p>Notes </p><input type="text" name="notes"><br>
+<br>
+    <input type="submit" name="submit">
+    
+    </form>
+    <br>
+    <br>
+    
+<form name="deleteBooking">
+<br><h3> Delete Booking</h3>
+    <p>Enter the Booking Id to delete</p> <input type="number" name="id" id ='deletedId'><br>
+<br>
+    <input type="submit" name="submit">
+    
+    </form>
+    <br>
+    <br>
+    <div id = "bookingData"></div>
+    
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
