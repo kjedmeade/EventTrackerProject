@@ -15,9 +15,6 @@ function init() {
 	document.updateBooking.submit.addEventListener('click', function(e) {
 		e.preventDefault();
 		var bookingId = document.getElementById('bookingId');
-		if (ifNan(bookingId.value)){
-			alert('Please enter a number for Id');
-		}
 		updateBookingById(bookingId.value);
 		location.reload()
 
@@ -79,15 +76,69 @@ function displayAllBookingEvents(bookings) {
 	var notesHeader = document.createElement('th');
 	var tableBody = document.createElement('tbody');
 
-	idHeader.textContent = "Id";
-	fNameHeader.textContent = "First Name";
-	lNameHeader.textContent = "Last Name";
-	emailHeader.textContent = "Email";
-	dateHeader.textContent = "Date";
-	photoTypeHeader.textContent = "Photo Type";
-	locationHeader.textContent = "Location";
-	durationHeader.textContent = "Duration";
-	notesHeader.textContent = "Notes";
+	idHeader.textContent = "ID";
+	idHeader.style.fontFamily="Avenir Light"
+	idHeader.style.fontSize="19px"
+	idHeader.style.paddingRight="20px"
+		idHeader.style.color="gray"
+	
+	fNameHeader.textContent = "FIRST NAME";
+	fNameHeader.style.fontFamily="Avenir Light"
+		fNameHeader.style.fontSize="19px"
+			fNameHeader.style.paddingRight="20px"
+			fNameHeader.style.color="gray"
+
+
+	lNameHeader.textContent = "LAST NAME";
+	lNameHeader.style.fontFamily="Avenir Light"
+		lNameHeader.style.fontSize="19px"
+			lNameHeader.style.paddingRight="20px"
+			lNameHeader.style.color="gray"
+
+
+	emailHeader.textContent = "EMAIL";
+	emailHeader.style.fontFamily="Avenir Light"
+		emailHeader.style.fontSize="19px"
+			emailHeader.style.paddingRight="20px"
+			emailHeader.style.color="gray"
+
+
+	dateHeader.textContent = "DATE";
+	dateHeader.style.fontFamily="Avenir Light"
+		dateHeader.style.fontSize="19px"
+			dateHeader.style.paddingRight="20px"
+			dateHeader.style.color="gray"
+
+
+	photoTypeHeader.textContent = "PHOTO TYPE";
+	photoTypeHeader.style.fontFamily="Avenir Light"
+		photoTypeHeader.style.fontSize="19px"
+			photoTypeHeader.style.paddingRight="20px"
+			photoTypeHeader.style.color="gray"
+
+		
+
+	locationHeader.textContent = "LOCATION";
+	locationHeader.style.fontFamily="Avenir Light"
+		locationHeader.style.fontSize="19px"
+			locationHeader.style.paddingRight="20px"
+			locationHeader.style.color="gray"
+
+
+	durationHeader.textContent = "DURATION";
+	durationHeader.style.fontFamily="Avenir Light"
+		durationHeader.style.fontSize="19px"
+			durationHeader.style.paddingRight="20px"
+			durationHeader.style.color="gray"
+
+
+	notesHeader.textContent = "NOTES";
+	notesHeader.style.fontFamily="Avenir Light"
+		notesHeader.style.fontSize="19px"
+			notesHeader.style.paddingRight="20px"
+			notesHeader.style.color="gray"
+
+
 
 	table.appendChild(tableHead);
 	tableHead.appendChild(tableRow);
@@ -116,14 +167,33 @@ function displayAllBookingEvents(bookings) {
 		var notesJ = document.createElement('td');
 
 		idJ.textContent = booking.id;
+		idJ.style.fontFamily="Avenir light";
+		
 		fNameJ.textContent = booking.firstName;
+				fNameJ.style.fontFamily="Avenir light";
+
 		lNameJ.textContent = booking.lastName;
+				lNameJ.style.fontFamily="Avenir light";
+
 		emailJ.textContent = booking.email;
+				emailJ.style.fontFamily="Avenir light";
+
 		dateJ.textContent = booking.date;
+				dateJ.style.fontFamily="Avenir light";
+				dateJ.style.paddingRigt="20 px";
+
 		photoTypeJ.textContent = booking.photoType;
+				photoTypeJ.style.fontFamily="Avenir light";
+
 		locationJ.textContent = booking.location;
+				locationJ.style.fontFamily="Avenir light";
+
 		durationJ.textContent = booking.duration;
+				durationJ.style.fontFamily="Avenir light";
+
 		notesJ.textContent = booking.notes;
+				notesJ.style.fontFamily="Avenir light";
+
 
 		bookingRow.appendChild(idJ);
 		bookingRow.appendChild(fNameJ);
@@ -277,7 +347,7 @@ xhr.open('DELETE', 'api/bookings/' + id , true);
 xhr.onreadystatechange = function() {
   if (xhr.readyState === 4 ) {
     if ( xhr.status == 204 ) { // Ok 
-alert('Your film has been deleted')    }
+alert('This booking has been deleted')    }
     else {
       console.log("Delete request failed.");
       console.error(xhr.status + ': ' + xhr.responseText);
@@ -304,7 +374,11 @@ printAverageDuration(average.toFixed(1));
 
 function printAverageDuration(average){
 	let divAverage = document.getElementById('showAverage');
-	divAverage.textContent = "The average booking time for this photographer iss " + average + " hours";
+	divAverage.textContent = "THE AVERAGE BOOKING TIME IS " + average + " HOURS";
+	divAverage.style.fontFamily="Avenir light";
+	divAverage.style.textAlign="center";
+	divAverage.style.fontSize="30px";
+	divAverage.style.color="gray";
 	
 }
 	
