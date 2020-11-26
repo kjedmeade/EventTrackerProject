@@ -1,0 +1,35 @@
+.create{
+
+  text-align: left;
+  font-size: 15px;
+  font-family: Avenir light;
+  color:gray;
+  padding-right: 20px;
+  }
+
+  .createHeader{
+
+    text-align: left;
+    font-size: 20px;
+    font-family: Avenir light;
+    color:gray;
+    }
+
+    .largerHeader{
+     text-align: center;
+     color: gray;
+     font-size:40px
+    }
+
+    .formP{
+
+      text-align: left;
+      font-size: 15px;
+      font-family: Avenir light;
+      color:gray;
+      padding-right: 20px;
+      }
+
+
+
+

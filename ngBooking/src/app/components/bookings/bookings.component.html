@@ -1,0 +1,127 @@
+<div class="container-sm">
+  <div *ngIf="!selected">
+  <br>
+		<p
+			style="text-align: right; font-size: 25px; font-family: Avenir light; color: gray">Ava
+			Anonymous Photography
+		<p>
+		<div style="text-align: center;">
+			<img src="assets/img/bouquet.png" class="Responsive image"
+				style="height: 500px; width: 900px">
+		</div>
+		<br> <br> <br> <br> <br>
+		<p
+			style="text-align: center; font-size: 30px; font-family: Avenir light; color: gray">
+			Hi! I'm Ava. I am a photographer currently based in Minneapolis, MN,
+			but am available WORLDWIDE to capture your special moments! Before
+			booking, check for currently booked sessions below. Look forward to
+			meeting you soon! <br> <br>
+		<p
+			style="text-align: center; font-size: 30px; font-family: Avenir light; color: gray">CHECK
+			OUT UPCOMING BOOKINGS!
+		<p>
+      <br>
+    </div>
+  <div *ngIf="!selected">
+  <table>
+    <thead>
+      <tr>
+        <td class="createHeader">Id</td>
+        <td class="createHeader">First Name</td>
+        <td class="createHeader">Last Name</td>
+        <td class="createHeader">Email</td>
+        <td class="createHeader">Date</td>
+        <td class="createHeader">Photo Type</td>
+        <td class="createHeader">Location</td>
+        <td class="createHeader">Duration</td>
+        <td class="createHeader">Notes</td>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookings">
+        <td class="create">{{booking.id}}</td>
+        <td class="create">{{booking.firstName}}</td>
+        <td class="create">{{booking.lastName}}</td>
+        <td class="create">{{booking.email}}</td>
+        <td class="create">{{booking.date}}</td>
+        <td class="create">{{booking.photoType}}</td>
+        <td class="create">{{booking.location}}</td>
+        <td class="create">{{booking.duration}}</td>
+        <td class="create">{{booking.notes}}</td>
+        <button (click) = "selected=booking" class="btn btn-link" > INFO</button>
+
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+<div *ngIf="!selected">
+<p class="largerHeader">BOOK A SESSION</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+
+  <form>
+    <p class="formP"> FIRST NAME </p><input type="text" name="firstName"  [(ngModel)]="newBooking.firstName"/><br />
+    <p class="formP"> LAST NAME </p><input type="text" name="lastName"  [(ngModel)]="newBooking.lastName" /><br />
+    <p class="formP"> EMAIL </p><input type="text" name="email"  [(ngModel)]="newBooking.email"/><br />
+    <p class="formP"> DATE </p><input type="text" name="date"  placeholder="YYYY-MM-DD"[(ngModel)]="newBooking.date" /><br />
+    <p class="formP"> PHOTO TYPE </p><select type="text" name="photoType"  [(ngModel)]="newBooking.photoType" >
+    <option value="Portrait Session">Portrait Session</option>
+    <option value="Wedding">Wedding</option>
+    <option value="Newborn Session">Newborn Session</option></select><br /><br />
+    <p class="formP"> LOCATION </p><input type="text" name="location"  [(ngModel)]="newBooking.location" /><br />
+    <p class="formP"> DURATION </p><input type="number" name="duration" [(ngModel)]="newBooking.duration" /><br />
+    <p class="formP"> NOTES </p><input type="text" name="notes"  [(ngModel)]="newBooking.notes" /><br /><br />
+    <div style="text-align: center;">
+    <button (click)="addBooking(newBooking)" class="btn btn-link">SUBMIT</button>
+    </div>
+  </form>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+
+
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col">
+      <div *ngIf="selected">
+        <br><br><br><br><br>
+
+        <h3 class="largerHeader">{{selected.firstName}} {{selected.lastName}} </h3>
+        <br><br>
+          <p class="createHeader">{{selected.email}}</p>
+          <p class="createHeader">{{selected.date}}</p>
+          <p class="createHeader">{{selected.photoType}}</p>
+          <p class="createHeader">{{selected.location}}</p>
+          <p class="createHeader">{{selected.duration}}</p>
+          <p class="createHeader">{{selected.notes}}</p>
+          <div style="text-align: center;">
+            <br><br>
+        <button (click)="selected=null" class="btn btn-link" > RETURN TO HOMEPAGE</button>
+        </div>
+
+    </div>
+  </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+

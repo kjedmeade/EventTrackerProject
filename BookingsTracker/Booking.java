@@ -1,4 +1,4 @@
-package com.skilldistillery.booking.entities;
+zzpackage com.skilldistillery.booking.entities;
 
 import java.time.LocalDate;
 
