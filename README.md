@@ -36,8 +36,8 @@ A separate Spring Starter Project was created to hold the controller, service, r
 ### JavaScript
 JavaScript was used to create the front end of this application via XHR. Event listeners, XHR code, and some of the elements displayed on the page were coded in the script.js file.
 
-### ANGULAR
-Angular was used to create a second version of the front end of this application. Code was implemented for respective component, model, and service portions of the application. 
+### Angular
+Angular was used to create a second version of the front end of this application. Code was implemented for respective component, model, and service portions of the application.
 
 ### Postman
 Postman test were created to check for correct mappings. A user is able view a list of all bookings in the database, find a booking by its id, create a new booking, update a booking, and/or delete a booking. Status codes were also added and implemented confirm the status of a request.
