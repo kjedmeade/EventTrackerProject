@@ -3,6 +3,8 @@
 This project is a tracker for photography bookings. A user is able to perform CRUD operations on a photography booking database belonging to a single photographer. Response codes were also created to show the status of a request based on the request.
 
 ### Technologies used:
+* ANGULAR
+* Node.js
 * JavaScript
 * XHR
 * Spring REST Services
@@ -33,6 +35,9 @@ A separate Spring Starter Project was created to hold the controller, service, r
 
 ### JavaScript
 JavaScript was used to create the front end of this application via XHR. Event listeners, XHR code, and some of the elements displayed on the page were coded in the script.js file.
+
+### ANGULAR
+Angular was used to create a second version of the front end of this application. Code was implemented for respective component, model, and service portions of the application. 
 
 ### Postman
 Postman test were created to check for correct mappings. A user is able view a list of all bookings in the database, find a booking by its id, create a new booking, update a booking, and/or delete a booking. Status codes were also added and implemented confirm the status of a request.
