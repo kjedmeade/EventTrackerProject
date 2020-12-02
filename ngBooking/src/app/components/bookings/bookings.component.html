@@ -39,6 +39,7 @@
       </tr>
     </thead>
     <tbody>
+
       <tr *ngFor="let booking of bookings">
         <td class="create">{{booking.id}}</td>
         <td class="create">{{booking.firstName}}</td>
@@ -49,13 +50,17 @@
         <td class="create">{{booking.location}}</td>
         <td class="create">{{booking.duration}}</td>
         <td class="create">{{booking.notes}}</td>
-        <button (click) = "selected=booking" class="btn btn-link" > INFO</button>
+        <button (click) = "selected=booking" class="btn btn-link" > UPDATE</button>
 
         <td>
         </td>
       </tr>
     </tbody>
   </table>
+
+  <p style="text-align: center; font-size: 20px; font-family: Avenir light; color: gray">
+    AVERAGE BOOKING DURATION : {{averageDuration()}} HOURS </p>
+
 </div>
 <br>
 <br>
@@ -91,7 +96,91 @@
 
 
 </div>
-<div class="container">
+
+
+
+
+
+<div *ngIf="selected"  >
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col">
+        <div *ngIf="selected"  style="text-align: center;" >
+          <p class="largerHeader">SESSION INFO</p>
+
+          <p class="create">ID: {{selected.id}}</p>
+                <p class="create">FIRST NAME: {{selected.firstName}}</p>
+                <p class="create">LAST NAME: {{selected.lastName}}</p>
+                <p class="create">EMAIL: {{selected.email}}</p>
+                <p class="create">DATE: {{selected.date}}</p>
+                <p class="create">PHOTO TYPE: {{selected.photoType}}</p>
+                <p class="create">LOCATION: {{selected.location}}</p>
+                <p class="create">DURATION: {{selected.duration}}</p>
+                <p class="create">NOTES: {{selected.notes}}</p>
+                <button (click)="setUpdatedBooking()" class="btn btn-link">UPDATE</button>
+                <button (click)="selected =null" class="btn btn-link">RETURN HOME</button>
+
+
+        </div>
+
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+<div *ngIf="selected && updatedBooking">
+  <p class="largerHeader">UPDATE THIS SESSION </p>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col">
+
+    <form>
+      <p class="formP"> FIRST NAME </p><input type="text" name="firstName"  [(ngModel)]="updatedBooking.firstName"/><br />
+      <p class="formP"> LAST NAME </p><input type="text" name="lastName"  [(ngModel)]="updatedBooking.lastName" /><br />
+      <p class="formP"> EMAIL </p><input type="text" name="email"  [(ngModel)]="updatedBooking.email"/><br />
+      <p class="formP"> DATE </p><input type="text" name="date"  placeholder="YYYY-MM-DD"[(ngModel)]="updatedBooking.date" /><br />
+      <p class="formP"> PHOTO TYPE </p><select type="text" name="photoType"  [(ngModel)]="updatedBooking.photoType" >
+      <option value="Portrait Session">Portrait Session</option>
+      <option value="Wedding">Wedding</option>
+      <option value="Newborn Session">Newborn Session</option></select><br /><br />
+      <p class="formP"> LOCATION </p><input type="text" name="location"  [(ngModel)]="updatedBooking.location" /><br />
+      <p class="formP"> DURATION </p><input type="number" name="duration" [(ngModel)]="updatedBooking.duration" /><br />
+      <p class="formP"> NOTES </p><input type="text" name="notes"  [(ngModel)]="updatedBooking.notes" /><br /><br />
+      <div style="text-align: center;">
+      <button (click)="updateBooking(updatedBooking)" class="btn btn-link">SUBMIT</button>
+      </div>
+    </form>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div style="text-align: center;" *ngIf="selected">
+  <form>
+    <p class="largerHeader"  >DELETE SESSION </p>
+    <button (click)="deleteBooking(selected.id)" class="btn btn-link">DELETE</button>
+
+  </form>
+</div>
+
+<!-- <br><br><br> -->
+
+
+
+
+<!-- <div class="container">
   <div class="row">
     <div class="col">
     </div>
@@ -117,10 +206,10 @@
     <div class="col">
     </div>
   </div>
-</div>
+</div> -->
 
 
-    </div>
+
 
 
 
