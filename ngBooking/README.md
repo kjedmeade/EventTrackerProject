@@ -1,27 +1,64 @@
-# NgBooking
+## EventTrackerProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+This project is a tracker for photography bookings. A user is able to perform CRUD operations on a photography booking database belonging to a single photographer. Response codes were also created to show the status of a request based on the request.
 
-## Development server
+### Technologies used:
+* ANGULAR
+* Node.js
+* JavaScript
+* XHR
+* Spring REST Services
+* JPARepository
+* Postman
+* Java
+* Gradle
+* Git
+* MySQL
+* MySQL Workbench
+* AWS EC2
+* XML
+* Github
+* Eclipse
+* Atom
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Database
+The database used is collection of data on photography bookings for a single photographer. Booking information for each client  in the database includes the first name, last name, booking date, type of event (e.g. portrait session), location, etc.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![GitHub Logo](DB/bookingsdb.png)
+### Classes
+#### Booking Entity
+A gradle project was created to store the booking entity and a Junit test case was conducted to confirm correct mappings.
 
-## Build
+#### Other Classes
+A separate Spring Starter Project was created to hold the controller, service, repository classes for the booking entity.  The main service class holds methods for conducting CRUD operations on the booking database.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### JavaScript
+JavaScript was used to create the front end of this application via XHR. Event listeners, XHR code, and some of the elements displayed on the page were coded in the script.js file.
 
-## Running unit tests
+### Angular
+Angular was used to create a second version of the front end of this application. Code was implemented for respective component, model, and service portions of the application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Postman
+Postman test were created to check for correct mappings. A user is able view a list of all bookings in the database, find a booking by its id, create a new booking, update a booking, and/or delete a booking. Status codes were also added and implemented confirm the status of a request.
 
-## Running end-to-end tests
+### Access
+List all bookings(Get)
+http://3.132.51.29:8080/BookingsTracker/api/bookings
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Find a single booking by Id (Get)
+http://3.132.51.29:8080/BookingsTracker/api/bookings/{id}
 
-## Further help
+Create a new booking(Post)
+http://3.132.51.29:8080/BookingsTracker/api/bookings/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Update a booking(Put)
+http://3.132.51.29:8080/BookingsTracker/api/bookings/{id}
+
+Delete a booking(Delete)
+http://3.132.51.29:8080/BookingsTracker/api/bookings/{id}
+
+
+
+### Lessons learned:
+I am learning more about the ease of use that with JPARepository.
