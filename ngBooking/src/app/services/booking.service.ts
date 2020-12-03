@@ -12,7 +12,7 @@ export class BookingService {
   private baseUrl = 'http://localhost:8086/';
   private url = this.baseUrl + 'api/bookings';
  index(): Observable<Booking[]> {
-    return this.http.get<Booking[]>(this.url + '?sorted=true')
+    return this.http.get<Booking[]>(this.url )
       .pipe(
         catchError((err: any) => {
           console.log(err);
@@ -22,7 +22,7 @@ export class BookingService {
   }
 
   create(data: Booking): Observable<Booking> {
-    return this.http.post<Booking>(this.url + '?sorted=true', data)
+    return this.http.post<Booking>(this.url, data)
       .pipe(
         catchError((err: any) => {
           console.log(err);
@@ -36,7 +36,7 @@ export class BookingService {
         'Content-type': 'application/json'
       }
     };
-    return this.http.put<Booking[]>(this.baseUrl + '/' + booking.id, booking, httpOptions).pipe(
+    return this.http.put<Booking[]>(this.url + '/' + booking.id, booking, httpOptions).pipe(
       catchError((err: any) => {
         console.log(err);
         return throwError('BookingService: Error retrieving todo list');

@@ -26,15 +26,15 @@
   <table>
     <thead>
       <tr>
-        <td class="createHeader">Id</td>
-        <td class="createHeader">First Name</td>
-        <td class="createHeader">Last Name</td>
-        <td class="createHeader">Email</td>
-        <td class="createHeader">Date</td>
-        <td class="createHeader">Photo Type</td>
-        <td class="createHeader">Location</td>
-        <td class="createHeader">Duration</td>
-        <td class="createHeader">Notes</td>
+        <td class="createHeader">ID</td>
+        <td class="createHeader">FIRST NAME</td>
+        <td class="createHeader">LAST NAME</td>
+        <td class="createHeader">EMAIL</td>
+        <td class="createHeader">DATE</td>
+        <td class="createHeader">PHOTO TYPE</td>
+        <td class="createHeader">LOCATION</td>
+        <td class="createHeader">DURATION</td>
+        <td class="createHeader">NOTES</td>
 
       </tr>
     </thead>
@@ -57,9 +57,10 @@
       </tr>
     </tbody>
   </table>
-
+  <br>
+  <br>
   <p style="text-align: center; font-size: 20px; font-family: Avenir light; color: gray">
-    AVERAGE BOOKING DURATION : {{averageDuration()}} HOURS </p>
+    AVERAGE BOOKING TIME: {{avgDuration}} HOURS </p>
 
 </div>
 <br>
@@ -69,11 +70,14 @@
 <div class="container">
   <div class="row">
     <div class="col">
+      <br> <br> <br>  <br> <br><br>
+      <img src="assets/img/family.png" class="Responsive image"
+				style="height: 300px; width: 400px">
     </div>
     <div class="col">
 
   <form>
-    <p class="formP"> FIRST NAME </p><input type="text" name="firstName"  [(ngModel)]="newBooking.firstName"/><br />
+    <p class="formP"> FIRST NAME </p><input type="text" name="firstName"  placeholder="FIRST NAME" [(ngModel)]="newBooking.firstName"/><br />
     <p class="formP"> LAST NAME </p><input type="text" name="lastName"  [(ngModel)]="newBooking.lastName" /><br />
     <p class="formP"> EMAIL </p><input type="text" name="email"  [(ngModel)]="newBooking.email"/><br />
     <p class="formP"> DATE </p><input type="text" name="date"  placeholder="YYYY-MM-DD"[(ngModel)]="newBooking.date" /><br />
@@ -175,7 +179,7 @@
   </form>
 </div>
 
-<!-- <br><br><br> -->
+<br><br><br>
 
 
 

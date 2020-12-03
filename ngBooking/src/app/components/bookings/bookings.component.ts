@@ -19,14 +19,14 @@ export class BookingsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadBookings();
-    this.averageDuration();
+    // this.averageDuration();
   }
 
   loadBookings(): void{
     this.bServe.index().subscribe(
       data=>{this.bookings=data;
       console.log('BookingListComponent.loadBooking(): bookings retrieved');
-      },
+      this.averageDuration();},
 
       err=>{
         console.error('BookingListComponent.loadBooking(): retreive failed');
@@ -95,8 +95,14 @@ averageDuration=function () {
   for (let i=0; i< this.bookings.length; i++){
     total += this.bookings[i].duration;
     count ++;
+    console.log('loop' + this.bookings[i].duration);
   }
-  let average = total/count;
+  console.log(count);
+  console.log(total);
+
+
+ let average :number;
+  average = total/count;
   this.avgDuration = average;
 };
 
